@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #000000;
   --foreground: #171717;
   --base_white:#FAFAFA;
   --base_black:#111111;
@@ -23,79 +23,87 @@ body {
   background: var(--background);
   font-family: var(--font-inter);
 }
+/* globals.css */
+section {
+  @apply container mx-auto  py-8 px-4 md:px-8 shadow-sm;
+}
 
-heading-1{
+
+.heading-1{
   @apply text-[28px] font-semibold  tracking-normal leading-3 font-sans text-base_white;
 }
-heading-2{
+.heading-2{
   @apply text-[26px] font-semibold  tracking-normal leading-3 font-sans text-base_white;
 }
-heading-3{
+.heading-3{
   @apply text-2xl font-semibold  tracking-normal  font-sans text-base_white;
 }
-heading-4{
+.heading-4{
   @apply text-[22px] font-semibold  tracking-normal leading-3 font-sans text-base_white;
 }
-heading-5{
+.heading-5{
   @apply text-xl font-semibold  tracking-normal font-sans text-base_white;
 }
-heading-6{
+.heading-6{
   @apply text-lg font-semibold  tracking-normal leading-3 font-sans text-base_white;
 }
-big-p{
+.big-p{
   @apply text-[16px] leading-normal font-normal font-sans text-base_white ;
 }
-x-big-p{
+.x-big-p{
   @apply text-lg text-base_white ;
 }
-m-p{
+.m-p{
   @apply text-[14px] leading-normal font-normal font-sans ;
 }
-s-p{
+.s-p{
   @apply text-[12px] leading-normal font-normal font-sans text-base_white ;
 }
-navigation-menu{
-  @apply text-base_white text-[12px] font-semibold tracking-normal leading-3 font-sans;
+.navigation-menu{
+  @apply  text-[12px] font-normal tracking-normal leading-3 font-sans;
 }
 button{
   @apply text-base_white text-[13px] font-medium uppercase ;
   cursor: pointer;
 }
 
-alink{
+.alink{
   @apply text-white opacity-90
 }
-a-underline-link{
+.a-underline-link{
   @apply text-white  opacity-90;
 }
-white-90{
+.white-90{
   @apply text-base_white opacity-90;
 }
-white-70{
+.white-70{
   @apply text-base_white opacity-70;
 }
-white-50{
+.white-50{
   @apply text-base_white opacity-50;
 }
-white-20{
+.white-20{
   @apply text-base_white opacity-20;
 }
-white-10{
+.white-10{
   @apply text-base_white opacity-10;
 }
 
-white-07{
+.white-07{
   @apply text-base_white opacity-[0.07];
 }
 
-white-05{
+.white-05{
   @apply text-base_white opacity-[0.05];
 }
 
-white-03{
+.white-03{
   @apply text-base_white opacity-[0.03];
 }
-white-02{
+.white-02{
   @apply text-base_white opacity-[0.02];
 }
 
+.card-bg{
+  @apply rounded-lg border border-[#cccccc18]
+}

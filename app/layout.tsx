@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
+import Header from "@/components/HomePage/Header";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -21,7 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${inter.variable} antialiased`}>{children}</body>
+      <body className={` ${inter?.variable}  bg-black`}>
+        <Header/>
+        <main>
+          {children}
+        </main>
+        </body>
     </html>
   );
 }
