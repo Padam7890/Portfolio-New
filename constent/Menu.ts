@@ -3,22 +3,22 @@ import { menuList } from "@/types/homepage";
 export const menuLists: menuList = [
   {
     name: "Home",
-    url: "/", // Correct
+    url: "/", 
   },
   {
     name: "About",
-    url: "/about", // Add leading slash
+    url: "/about", 
   },
   {
     name: "Services",
-    url: "/services", // Add leading slash
+    url: "/services",
   },
   {
     name: "Projects",
-    url: "/projects", // Add leading slash
+    url: "/projects",
   },
   {
     name: "Blogs",
-    url: "/blogs", // Add leading slash
+    url: "/blogs",
   },
 ];
