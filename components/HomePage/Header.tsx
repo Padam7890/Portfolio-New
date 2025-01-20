@@ -4,6 +4,8 @@ import { menuItem } from "@/types/homepage";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { CiMenuFries } from "react-icons/ci";
+import { RxCross1 } from "react-icons/rx";
 
 const Header = () => {
   const pathname = usePathname();
@@ -22,11 +24,17 @@ const Header = () => {
         <div className="block md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-white p-2 rounded-md focus:outline-none"
+            className="text-white  p-2 rounded-md focus:outline-none"
           >
-            <span className="block w-6 h-0.5 bg-white mb-1"></span>
-            <span className="block w-6 h-0.5 bg-white mb-1"></span>
-            <span className="block w-6 h-0.5 bg-white"></span>
+            <div className="relative">
+              {isMenuOpen ? (
+                <RxCross1 className="w-6 h-9 transition-all transform scale-100 delay-300" />
+              ) : (
+                <CiMenuFries className="w-6 h-9 text-white transition-all transform scale-100 delay-300" />
+              )}
+            </div>
+            {/* <span className="block w-6 h-0.5 bg-white mb-1"></span>
+            <span className="block w-6 h-0.5 bg-white"></span> */}
           </button>
         </div>
 
