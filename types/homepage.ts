@@ -5,3 +5,21 @@ export interface menuItem {
   
 export type menuList = menuItem[];
   
+export interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+}
+
+export interface DefaultLayoutProps {
+  children: React.ReactNode;
+  seoProps?: {
+    title?: string;
+    description?: string;
+    keywords?: string;
+    image?: string;
+    url?: string;
+  };
+}
