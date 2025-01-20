@@ -15,7 +15,7 @@ const fetcher = async (endpoint: string, options = {}) => {
     throw new Error(`Error fetching ${endpoint}: ${res.statusText}`);
   }
 
-  return res.data;
+  return res.data.data;
 };
 
 export default fetcher;
