@@ -11,7 +11,7 @@ export const metadata:Metadata = {
 
 };
 
-export default function Home() {
+const Home =() =>{
 
   return (
     <>
@@ -19,3 +19,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;

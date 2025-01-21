@@ -1,13 +1,15 @@
 import { fetchGeneral } from "@/services/generalService";
+import { IGeneralApiRes } from "@/types/apiResponse";
 import React from "react";
 
 const Herosection = async () => {
-  const data = await fetchGeneral();
+  const data:IGeneralApiRes = await fetchGeneral();
+  console.log(data)
   return (
-    <section className=" grid grid-cols-1 md:grid-cols-2">
-      <div className="leftside card-bg  text-white">
+    <section className=" grid grid-cols-1 md:grid-cols-2 pl-0 ">
+      <div className="leftside card-bg  text-white max-w-[400px] mx-auto md:mx-0 ">
         <img
-          src={process.env.NEXT_PUBLIC_API_ASSETS_URL + data.HeroImage.url}
+          src={process.env.NEXT_PUBLIC_API_ASSETS_URL + data?.HeroImage?.url}
           alt=""
         />
         <div>

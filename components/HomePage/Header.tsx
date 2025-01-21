@@ -37,7 +37,7 @@ const Header = () => {
             <span className="block w-6 h-0.5 bg-white"></span> */}
           </button>
         </div>
-
+  
         <div className="hidden md:block">
           <ul className="flex text-base_white font-medium uppercase gap-9">
             {menuLists.map((menu: menuItem, index: number) => (
@@ -57,6 +57,10 @@ const Header = () => {
             ))}
           </ul>
         </div>
+        <div className="hidden lg:block">
+          <button className=" bg-[#242323] p-4 rounded-full"> Contact Us</button>
+        </div>
+
       </div>
 
       <div
