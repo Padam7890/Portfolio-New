@@ -45,10 +45,10 @@ const Header = () => {
                 <Link
                   href={menu.url}
                   passHref
-                  className={`navigation-menu  bg-opacity-5 px-6 py-2 hover:text-white ${
+                  className={` btn rounded-full navigation-menu  bg-opacity-5 px-6 py-2 hover:text-white ${
                     pathname === menu.url
-                      ? "border white-50 border-[#cccccc3e] rounded-full "
-                      : "white-70"
+                      ? "border white-50 border-[#cccccc3e] rounded-full btn "
+                      : "white-70 "
                   }`}
                 >
                   {menu.name}

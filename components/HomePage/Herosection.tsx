@@ -6,8 +6,8 @@ const Herosection = async () => {
   const data:IGeneralApiRes = await fetchGeneral();
   console.log(data)
   return (
-    <section className=" grid grid-cols-1 md:grid-cols-2 pl-0 ">
-      <div className="leftside card-bg  text-white p-4 mx-auto md:mx-0 ">
+    <section className=" grid grid-cols-1 md:grid-cols-2 pl-0 gap-5  ">
+      <div className="leftside card-bg max-w-[600px]  text-white p-4 mx-auto md:mx-0 flex flex-col justify-center ">
         <img
           src={process.env.NEXT_PUBLIC_API_ASSETS_URL + data?.HeroImage?.url}
           alt=""
@@ -22,11 +22,15 @@ const Herosection = async () => {
             nunc sed neque.
           </p>
           <div className="button mt-5 flex gap-5 justify-between ">
-            <button className=" button-primary text-accent_color">Book A Call</button>
-            <button className="button-secondary white-90">Get In Touch</button>
+            <button className=" btn button-primary text-accent_color">Book A Call</button>
+            <button className="btn button-secondary white-90">Get In Touch</button>
           </div>
 
         </div>
+      </div>
+      <div id="rightside card-bg">
+         <h3 className="heading-3"> My Expert area</h3>
+
       </div>
     </section>
   );
