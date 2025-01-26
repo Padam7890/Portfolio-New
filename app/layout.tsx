@@ -27,7 +27,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
       <head />
-      <body className={`${inter.variable} bg-black`}>
+      <body className={`${inter.variable} bg-black  `}>
           <Header />
           {children}
       </body>
