@@ -107,3 +107,28 @@ button{
 .card-bg{
   @apply rounded-lg border border-[#cccccc18]
 }
+.button-primary{
+  @apply text-accent_color border border-[#cccccc18] bg-yellow-600 bg-opacity-5 rounded-sm px-2 py-1
+}
+.button-secondary{
+  @apply  border border-[#cccccc18] rounded-sm font-medium px-2 py-1 
+}
+
+.btn:hover{
+   @apply bg-white bg-opacity-20  shadow-inner shadow-white/15
+}
+.invert-logo{
+  filter:grayscale(1)
+}
+
+.invert-logo:hover{
+  filter: grayscale(0);
+  fill:#FF8833
+}
+.logo-fill {
+  fill: var(--accent_color);
+}
+.logo{
+  width: 60px;
+  height: 60px;  
+}
