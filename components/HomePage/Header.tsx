@@ -20,7 +20,7 @@ const Header = () => {
       }`}
     >
       <div className="bg-opacity-20 flex justify-between items-center">
-        <div className="logo heading-1">Padam</div>
+        <div className=" heading-1">Padam</div>
         <div className="block md:hidden">
           <button
             onClick={toggleMenu}

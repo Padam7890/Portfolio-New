@@ -117,3 +117,18 @@ button{
 .btn:hover{
    @apply bg-white bg-opacity-20  shadow-inner shadow-white/15
 }
+.invert-logo{
+  filter:grayscale(1)
+}
+
+.invert-logo:hover{
+  filter: grayscale(0);
+  fill:#FF8833
+}
+.logo-fill {
+  fill: var(--accent_color);
+}
+.logo{
+  width: 60px;
+  height: 60px;  
+}

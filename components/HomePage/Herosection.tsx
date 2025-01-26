@@ -5,6 +5,9 @@ import React from "react";
 const Herosection = async () => {
   const data:IGeneralApiRes = await fetchGeneral();
   console.log(data)
+  
+
+
   return (
     <section className=" grid grid-cols-1 md:grid-cols-2 pl-0 gap-5  ">
       <div className="leftside card-bg max-w-[600px]  text-white p-4 mx-auto md:mx-0 flex flex-col justify-center ">
@@ -30,6 +33,13 @@ const Herosection = async () => {
       </div>
       <div id="rightside card-bg">
          <h3 className="heading-3"> My Expert area</h3>
+         <div id="logo " className="mt-4 grid grid-cols-2 lg:grid-cols-3   ">
+           <div className="nodejs flex flex-col gap-2 card-bg items-center justify-center py-6" >
+              <img className="invert-logo logo" src="./logo/nodelogo.svg" alt="node js experience" />
+             <span className="heading-6 mt-4">Node.js</span>
+           </div>
+
+         </div>
 
       </div>
     </section>
