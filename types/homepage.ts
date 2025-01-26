@@ -23,3 +23,9 @@ export interface DefaultLayoutProps {
     url?: string;
   };
 }
+export interface expertiseLogoProps {
+  logo: string;
+  alt: string;
+  title: string;
+  
+}

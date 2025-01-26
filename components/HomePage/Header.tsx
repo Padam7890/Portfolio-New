@@ -15,11 +15,11 @@ const Header = () => {
 
   return (
     <section
-      className={`w-full h-auto card-bg mt-9 sticky top-5 p-3 md:p-8 bg-base_black md:bg-[#111111]/30 md:backdrop-blur-md  backdrop-blur-none ${
+      className={`w-full h-auto card-bg mt-9 sticky top-5 p-3 md:p-8 bg-base_black md:bg-[#111111]/30 md:backdrop-blur-md  backdrop-blur-none flex items-center justify-between z-20 ${
         isMenuOpen ? "backdrop-blur-none" : " backdrop-blur-2xl bg-[#111111]/90"
       }`}
     >
-      <div className="bg-opacity-20 flex justify-between items-center">
+      <div className="bg-opacity-20 flex justify-between items-center w-full">
         <div className=" heading-1">Padam</div>
         <div className="block md:hidden">
           <button

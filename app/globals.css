@@ -6,7 +6,7 @@
   --background: #000000;
   --foreground: #171717;
   --base_white:#FAFAFA;
-  --base_black:#111111;
+  --base_black:rgba(250, 250, 250, 0.03);;
   --accent_color:#FF8833;
 
 }
@@ -25,7 +25,7 @@ body {
 }
 /* globals.css */
 section {
-  @apply container mx-auto  py-8 px-4 md:px-8 shadow-sm;
+  @apply container mx-auto   overflow-visible  w-full relative max-w-[1000px] py-9;
 }
 
 
@@ -108,27 +108,26 @@ button{
   @apply rounded-lg border border-[#cccccc18]
 }
 .button-primary{
-  @apply text-accent_color border border-[#cccccc18] bg-yellow-600 bg-opacity-5 rounded-sm px-2 py-1
+  @apply text-accent_color border border-[#cccccc18] bg-yellow-600 bg-opacity-5 rounded-sm px-5 py-4
 }
 .button-secondary{
-  @apply  border border-[#cccccc18] rounded-sm font-medium px-2 py-1 
+  @apply  border border-[#cccccc18] rounded-sm font-medium px-5 py-4
 }
 
 .btn:hover{
    @apply bg-white bg-opacity-20  shadow-inner shadow-white/15
 }
-.invert-logo{
-  filter:grayscale(1)
-}
 
-.invert-logo:hover{
-  filter: grayscale(0);
-  fill:#FF8833
+.invert-logo{
+ @apply  grayscale group-hover:grayscale-0
 }
 .logo-fill {
   fill: var(--accent_color);
 }
 .logo{
-  width: 60px;
-  height: 60px;  
+  width: 40px;
+  height: 40px;  
+}
+.card-items:hover{
+  @apply shadow-xl shadow-base_black transition-all delay-200 cursor-pointer ;
 }
