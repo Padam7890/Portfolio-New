@@ -107,3 +107,9 @@ button{
 .card-bg{
   @apply rounded-lg border border-[#cccccc18]
 }
+.button-primary{
+  @apply text-accent_color border border-[#cccccc18] bg-yellow-600 bg-opacity-5 rounded-sm px-2 py-1
+}
+.button-secondary{
+  @apply  border border-[#cccccc18] rounded-sm font-medium px-2 py-1 
+}
