@@ -33,7 +33,7 @@ const Herosection = async () => {
       </div>
       <div className="rightside  ">
         <div className=" card-bg p-8 bg-[#111111]/20 ">
-          <h3 className="heading-3 ml-8 md:ml-0 mb-6"> My Expert Area</h3>
+          <h3 className="heading-3 ml-8 md:ml-0 mb-4"> My Expert Area</h3>
           <div
             id="logo "
             className="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-4   "
