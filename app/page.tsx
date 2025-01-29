@@ -2,6 +2,7 @@
 import React from "react";
 import Herosection from "@/components/HomePage/Herosection";
 import { Metadata } from "next";
+import SnakeGame from "@/components/Game/SnakeGame";
 
 export const metadata:Metadata = {
   title: "Home page",
@@ -16,6 +17,7 @@ const Home =() =>{
   return (
     <>
       <Herosection />
+      <SnakeGame/>
     </>
   );
 }
