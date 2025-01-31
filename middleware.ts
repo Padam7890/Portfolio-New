@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { NextRequest, NextResponse } from 'next/server';
 import fetcher from './utils/api/fetcher';
-import { fetchGeneral } from './services/generalService';
 
 export async function middleware(req: NextRequest) {
   const url = req.nextUrl.clone();

@@ -2,8 +2,10 @@
 import { Inter } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
-import Header from "@/components/HomePage/Header";
 import { Metadata } from "next";
+import React from "react";
+import Sidebar from "@/components/__Server/Sidebar";
+import NavbarComponent from "@/components/HomePage/Navbar";
 // Apply global font
 export const inter = Inter({
   subsets: ["latin"],
@@ -28,8 +30,13 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
     <html lang="en">
       <head />
       <body className={`${inter.variable} bg-black  `}>
-          <Header />
-          {children}
+        <main>
+          <Sidebar />
+          <div className="main-content">
+            <NavbarComponent />
+            {children}
+          </div>
+        </main>
       </body>
     </html>
   );
