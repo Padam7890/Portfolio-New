@@ -2,7 +2,8 @@ import React from 'react'
 
 const NotFount = () => {
   return (
-    <div>NotFount</div>
+    <div className=' flex items-center justify-items-center'
+    >NotFound</div>
   )
 }
 

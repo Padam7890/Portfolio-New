@@ -11,4 +11,16 @@ export interface IGeneralApiRes {
   };
 }
 
+export interface IPersonalInfo{
+   email: string;
+   facebook: string;
+   id:number;
+   instagram: string;
+   linkedin: string;
+   location: string;
+   name: string;
+   phone: string;
+   positions: string;
+}
 
+export type PersonalInfo = IPersonalInfo;

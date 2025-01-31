@@ -1,12 +1,10 @@
 import { ExpertiseData } from "@/constent/expertise";
-import { fetchGeneral } from "@/services/generalService";
+import { fetchPersonalInfo } from "@/services/generalService";
 import { IGeneralApiRes } from "@/types/apiResponse";
 import React from "react";
 
 const Herosection = async () => {
-  const data: IGeneralApiRes = await fetchGeneral();
-  console.log(data);
-
+  const data: IGeneralApiRes = await fetchPersonalInfo();
   return (
     <section className=" grid grid-cols-1 md:grid-cols-[50%,1fr] lg:grid-cols-[33%,1fr] pl-0 gap-5   ">
       <div className="leftside card-bg  text-white p-4 mx-auto md:mx-0 flex flex-col justify-center items-center lg:items-start bg-base_black gap-5  lg:self-stretch lg:flex-shrink-0 lg:flex-grow" >
