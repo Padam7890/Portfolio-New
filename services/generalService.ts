@@ -1,20 +1,14 @@
-import { IGeneralApiRes } from "@/types/apiResponse";
 import fetcher from "@/utils/api/fetcher";
 
-export const fetchPersonalInfo = async () => {
+export const handleApiRequest = async (endpoint: string) => {
   try {
-    const response = await fetcher("personalinfo");
+    const response = await fetcher(`${endpoint}?populate=*`);
     return response.data;
   } catch (error) {
-    return ;
+    console.error(`Error fetching data from ${endpoint}:`, error);
+    return undefined;
   }
 };
-
-export const fetchGeneralInfo = async () => {
-  try {
-    const response = await fetcher("general?populate=*");
-    return response.data;
-  } catch (error) {
-    return ;
-  }
-};
+export const fetchPersonalInfo = async () => handleApiRequest("personalinfo");
+export const fetchGeneralInfo = async () => handleApiRequest("general");
+export const fetchSkillInfo = async () => handleApiRequest("skills");

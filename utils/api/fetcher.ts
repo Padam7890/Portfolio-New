@@ -1,29 +1,44 @@
-import axios, { AxiosError } from "axios";
-import { redirect } from "next/navigation";
+import Axios, { AxiosError, AxiosRequestConfig } from "axios";
+import { setupCache } from "axios-cache-interceptor"
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
-const fetcher = async (endpoint: string, options = {}) => {
+const axiosInstance = Axios.create({
+  baseURL: BASE_URL,
+});
+
+const axios = setupCache(axiosInstance,{
+});
+
+interface FetcherResponse<T> {
+  data?: T;
+  success: boolean;
+  error?: string;
+}
+
+const fetcher = async <T = any>(
+  endpoint: string,
+  options: AxiosRequestConfig = {}
+): Promise<FetcherResponse<T>> => {
   try {
-    const res = await axios(`${BASE_URL}/${endpoint}`, {
+    const response = await axios(endpoint, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_BACKEND_AUTH_TOKEN}`,
+        "Cache-Control": "max-age=3600",
       },
       ...options,
     });
 
-    if (res.status !== 200) {
-      throw new Error(`Error fetching ${endpoint}: ${res.statusText}`);
-    }
     return {
-      data: res.data.data,
+      data: response.data.data,
       success: true,
     };
   } catch (error: unknown) {
+    const errMsg = (error as any)?.response?.data || (error as Error)?.message;
     return {
       success: false,
-      error: error,
+      error: errMsg || "Unknown error occurred",
     };
   }
 };

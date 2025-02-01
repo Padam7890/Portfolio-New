@@ -21,6 +21,26 @@ export interface IPersonalInfo{
    name: string;
    phone: string;
    positions: string;
+   profileimage:{
+    url: string;
+    alternativeText: string;
+    caption: string;
+
+   };
+   birthday:string 
 }
 
 export type PersonalInfo = IPersonalInfo;
+
+
+export interface ISkills {
+  title: string;
+  image: {
+    url: string;
+    alt: string;
+    caption: string;
+  };
+  description: string;
+}
+
+export type Skills = ISkills[];
