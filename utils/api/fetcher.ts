@@ -1,4 +1,4 @@
-import Axios, { AxiosError, AxiosRequestConfig } from "axios";
+import Axios, { AxiosRequestConfig } from "axios";
 import { setupCache } from "axios-cache-interceptor"
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL;

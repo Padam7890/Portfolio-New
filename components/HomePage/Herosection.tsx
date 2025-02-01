@@ -1,6 +1,7 @@
 import { ExpertiseData } from "@/constent/expertise";
 import { fetchPersonalInfo } from "@/services/generalService";
 import { IGeneralApiRes } from "@/types/apiResponse";
+import Image from "next/image";
 import React from "react";
 
 const Herosection = async () => {
@@ -9,7 +10,7 @@ const Herosection = async () => {
     <section className=" grid grid-cols-1 md:grid-cols-[50%,1fr] lg:grid-cols-[33%,1fr] pl-0 gap-5   ">
       <div className="leftside card-bg  text-white p-4 mx-auto md:mx-0 flex flex-col justify-center items-center lg:items-start bg-base_black gap-5  lg:self-stretch lg:flex-shrink-0 lg:flex-grow" >
         <div>
-        <img
+        <Image
           className="bg-cover"
           sizes="calc(max((min(100vw - 60px, 1000px) - 20px) / 2, 1px) - 40px)"
           src={process.env.NEXT_PUBLIC_API_ASSETS_URL + data?.HeroImage?.url}
