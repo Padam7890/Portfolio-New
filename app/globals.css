@@ -1392,7 +1392,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box { border-radius: 30px; }
 
-  .avatar-box img { width: 120px; }
+  .avatar-box img { width: 40px; }
 
   .info-content .name { margin-bottom: 15px; }
 

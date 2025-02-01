@@ -26,8 +26,8 @@ const SidebarComponent = ({ data }: { data: IPersonalInfo }) => {
               data?.profileimage?.url ? data.profileimage.url : "/uploads/profile_padam_thapa_developer_c7a31eb016.jpg"
             }`}
             alt={data?.profileimage?.alternativeText}
-            width={200}
-            height={200}
+            width={500}
+            height={500}
           />{" "}
         </figure>
 
