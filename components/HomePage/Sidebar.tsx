@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { FaCalendarAlt, FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -10,26 +10,30 @@ import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
 import { IPersonalInfo, PersonalInfo } from "@/types/apiResponse";
 
-const SidebarComponent = ({data}:{data:IPersonalInfo}) => {
-
-  const date = new Date();
-  const formattedDate = date.toLocaleDateString().slice(0, 16);
+const SidebarComponent = ({ data }: { data: IPersonalInfo }) => {
   const [active, setActive] = useState(false);
 
   const changeActive = () => {
     setActive(!active);
   };
-
+  console.log(data);
   return (
-    <aside className={`sidebar ${active? "active": ""}`} data-sidebar>
+    <aside className={`sidebar ${active ? "active" : ""}`} data-sidebar>
       <div className="sidebar-info">
         <figure className="avatar-box">
-          {/* <Image src={avatar} alt="Richard hanrick" width="80" /> */}
+          <Image
+            src={`${process.env.NEXT_PUBLIC_API_ASSETS_URL}${
+              data?.profileimage?.url ? data.profileimage.url : "/uploads/profile_padam_thapa_developer_c7a31eb016.jpg"
+            }`}
+            alt={data?.profileimage?.alternativeText}
+            width={400}
+            height={200}
+          />{" "}
         </figure>
 
         <div className="info-content">
-          <h1 className="name" title={data.name}>
-            {data.name}
+          <h1 className="name" title={data?.name}>
+            {data?.name}
           </h1>
           <p className="title">{data?.positions}</p>
         </div>
@@ -40,7 +44,10 @@ const SidebarComponent = ({data}:{data:IPersonalInfo}) => {
           data-sidebar-btn
         >
           <span>Show Contacts</span>
-          <IoIosArrowDown className="arrowDown" name="chevron-down"></IoIosArrowDown>
+          <IoIosArrowDown
+            className="arrowDown"
+            name="chevron-down"
+          ></IoIosArrowDown>
         </button>
       </div>
 
@@ -54,8 +61,8 @@ const SidebarComponent = ({data}:{data:IPersonalInfo}) => {
             </div>
             <div className="contact-info">
               <p className="contact-title">Email</p>
-              <a href={`mailto:${data.email}`} className="contact-link">
-                {data.email}
+              <a href={`mailto:${data?.email}`} className="contact-link">
+                {data?.email}
               </a>
             </div>
           </li>
@@ -66,7 +73,7 @@ const SidebarComponent = ({data}:{data:IPersonalInfo}) => {
             </div>
             <div className="contact-info">
               <p className="contact-title">Phone</p>
-              <a href={`tel:${data.phone}`} className="contact-link">
+              <a href={`tel:${data?.phone}`} className="contact-link">
                 {data?.phone}
               </a>
             </div>
@@ -78,7 +85,7 @@ const SidebarComponent = ({data}:{data:IPersonalInfo}) => {
             </div>
             <div className="contact-info">
               <p className="contact-title">Birthday</p>
-              <time dateTime="1997-08-07">{formattedDate}</time>
+              <time dateTime="1997-08-07">{data?.birthday}</time>
             </div>
           </li>
 
