@@ -8,7 +8,7 @@ import { IoPhonePortraitOutline } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
-import { IPersonalInfo, PersonalInfo } from "@/types/apiResponse";
+import { IPersonalInfo } from "@/types/apiResponse";
 
 const SidebarComponent = ({ data }: { data: IPersonalInfo }) => {
   const [active, setActive] = useState(false);

@@ -1,4 +1,4 @@
-import { IGeneralApiRes, PersonalInfo } from "@/types/apiResponse";
+import {PersonalInfo } from "@/types/apiResponse";
 import SidebarComponent from "../HomePage/Sidebar";
 import { fetchPersonalInfo } from "@/services/generalService";
 

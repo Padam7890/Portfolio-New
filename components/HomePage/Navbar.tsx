@@ -1,8 +1,6 @@
 "use client"
-
-import { IGeneralApiRes } from "@/types/apiResponse";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const NavbarComponent = () => {

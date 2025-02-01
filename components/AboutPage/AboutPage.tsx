@@ -14,7 +14,6 @@ const AboutPage = ({ generalInformation, skills }: Props) => {
 
   const toggleActive = (skill?: ISkills) => {
     setActiveSkill(skill || null);
-
   };
 
 
@@ -30,7 +29,7 @@ const AboutPage = ({ generalInformation, skills }: Props) => {
         </section>
 
         <section className="service">
-          <h3 className="h3 service-title">What I'm doing</h3>
+          <h3 className="h3 service-title">What I am doing</h3>
 
           <ul className="service-list">
             {skills?.map((skill: ISkills, index: number) => (
