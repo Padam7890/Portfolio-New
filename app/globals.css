@@ -343,6 +343,12 @@ main {
   align-items: center;
   flex-direction: column;
 }
+.comingsoon img {
+  width: 100%;
+  height: auto;
+}
+
+
 .comingsoon h3{
   color: var(--white-2);
   font-size: var(--fs-7);
