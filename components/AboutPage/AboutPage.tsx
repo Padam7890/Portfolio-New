@@ -15,6 +15,7 @@ const AboutPage = ({ generalInformation, skills }: Props) => {
   const toggleActive = (skill?: ISkills) => {
     setActiveSkill(skill || null);
   };
+  console.log(skills)
 
 
   return (
@@ -41,7 +42,7 @@ const AboutPage = ({ generalInformation, skills }: Props) => {
               >
                 <div className="service-icon-box">
                   <Image
-                    src={`${process.env.NEXT_PUBLIC_API_ASSETS_URL}${skill?.image?.url}`}
+                    src={`${skill?.image?.url}`}
                     alt={skill?.title || "Skill"}
                     width="40"
                     height="40"
