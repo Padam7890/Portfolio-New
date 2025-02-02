@@ -1,4 +1,4 @@
-"use client";  // Ensures that this code is only executed on the client
+"use client";
 
 import React, { useEffect, useState } from "react";
 import { Categories, IPortfolio } from "@/types/apiResponse";
@@ -17,7 +17,7 @@ const PortfolioComponent = ({ portfolioCategory }: Props) => {
   const [isActive, setIsActive] = useState(false);
   const [activeCategory, setActiveCategory] = useState("");
 
-  const handleClick = (category: any) => {
+  const handleClick = (category: string) => {
     setActiveCategory(category);
     getPortfolio(category);
   };
@@ -28,7 +28,7 @@ const PortfolioComponent = ({ portfolioCategory }: Props) => {
 
   const categories = portfolioCategory;
 
-  const getPortfolio = async (categoryId: any) => {
+  const getPortfolio = async (categoryId: string) => {
     setIsLoading(true); 
     try {
       const res = await fetchPortfoliosInfo(categoryId);

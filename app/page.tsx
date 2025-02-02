@@ -1,5 +1,5 @@
 // app/page.tsx (Homepage)
-import React, { useEffect } from "react";
+import React from "react";
 import { Metadata } from "next";
 import About from "./about/page";
 

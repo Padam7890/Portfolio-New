@@ -39,10 +39,12 @@ const Herosection = async () => {
           >
             {ExpertiseData.map((data, index) => (
               <div key={index} className="nodejs flex flex-col gap-2 card-bg items-center justify-center py-6 bg-[#111111]/40 card-items group">
-                <img
+                <Image
                   className="invert-logo logo"
                   src={data?.logo}
                   alt={data?.alt}
+                  width={60}
+                  height={60}
                 />
                 <span className="heading-6 mt-4">{data.title}</span>
               </div>

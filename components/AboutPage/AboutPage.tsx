@@ -2,7 +2,7 @@
 import { IGeneralApiRes, ISkills, Skills } from "@/types/apiResponse";
 import { getSmallText } from "@/utils/function";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 interface Props {
   generalInformation: IGeneralApiRes;
