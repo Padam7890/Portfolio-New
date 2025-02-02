@@ -2,6 +2,7 @@
   "name": "portfolio_app",
   "version": "0.1.0",
   "private": true,
+  "proxy":"https://portfolio-new-backend-od98.onrender.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,6 +16,7 @@
     "axios-cache-interceptor": "^1.6.2",
     "next": "^15.1.5",
     "next-redux-wrapper": "^8.1.0",
+    "nprogress": "^0.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
+    "@types/nprogress": "^0.2.3",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.20",

@@ -6,6 +6,9 @@ import { Metadata } from "next";
 import React from "react";
 import Sidebar from "@/components/__Server/Sidebar";
 import NavbarComponent from "@/components/HomePage/Navbar";
+import 'nprogress/nprogress.css';
+
+
 // Apply global font
 export const inter = Inter({
   subsets: ["latin"],

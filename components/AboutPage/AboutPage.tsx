@@ -2,7 +2,7 @@
 import { IGeneralApiRes, ISkills, Skills } from "@/types/apiResponse";
 import { getSmallText } from "@/utils/function";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface Props {
   generalInformation: IGeneralApiRes;
@@ -15,8 +15,6 @@ const AboutPage = ({ generalInformation, skills }: Props) => {
   const toggleActive = (skill?: ISkills) => {
     setActiveSkill(skill || null);
   };
-  console.log(skills)
-
 
   return (
     <>

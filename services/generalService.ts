@@ -12,3 +12,6 @@ export const handleApiRequest = async (endpoint: string) => {
 export const fetchPersonalInfo = async () => handleApiRequest("personalinfo");
 export const fetchGeneralInfo = async () => handleApiRequest("general");
 export const fetchSkillInfo = async () => handleApiRequest("skills");
+export const fetchResumeInfo = async () => handleApiRequest('experiences');
+export const fetchCategoryInfo = async () => handleApiRequest('categories');
+export const fetchPortfoliosInfo = async (categoryId:any) => handleApiRequest("portfolios");

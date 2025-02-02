@@ -4,7 +4,7 @@ const ServerDown = () => {
   return (
     <section className=" text-white">
       <h3 className=" text-center text-4xl font-extrabold">Server Down !</h3>
-      <p className="text-center">
+      <p className="text-center text-white">
         Sorry, the server is currently down. Please try again later.
       </p>
       <div className=" flex items-center justify-center mt-20">

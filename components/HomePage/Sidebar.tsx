@@ -9,8 +9,15 @@ import { MdEmail } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
 import { IPersonalInfo } from "@/types/apiResponse";
+import dynamic from "next/dynamic";
 
 const SidebarComponent = ({ data }: { data: IPersonalInfo }) => {
+  const TopProgressBar = dynamic(
+    () => {
+      return import("../../utils/nprogress");
+    },
+    { ssr: false }
+  );
   const [active, setActive] = useState(false);
 
   const changeActive = () => {
@@ -19,11 +26,14 @@ const SidebarComponent = ({ data }: { data: IPersonalInfo }) => {
   console.log(data);
   return (
     <aside className={`sidebar ${active ? "active" : ""}`} data-sidebar>
+      <TopProgressBar />
       <div className="sidebar-info">
         <figure className="avatar-box">
           <Image
             src={`${process.env.NEXT_PUBLIC_API_ASSETS_URL}${
-              data?.profileimage?.url ? data.profileimage.url : "/uploads/profile_padam_thapa_developer_c7a31eb016.jpg"
+              data?.profileimage?.url
+                ? data.profileimage.url
+                : "/uploads/profile_padam_thapa_developer_c7a31eb016.jpg"
             }`}
             alt={data?.profileimage?.alternativeText}
             width={500}
