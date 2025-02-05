@@ -1,5 +1,5 @@
 import Axios, { AxiosRequestConfig } from "axios";
-import { setupCache } from "axios-cache-interceptor"
+import { CacheAxiosResponse, setupCache } from "axios-cache-interceptor";
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -7,22 +7,21 @@ const axiosInstance = Axios.create({
   baseURL: BASE_URL,
 });
 
-const axios = setupCache(axiosInstance,{
-});
+const axios = setupCache(axiosInstance, {});
 
-interface FetcherResponse<T> {
-  data?: T;
-  success: boolean;
-  error?: string;
-}
 
 const fetcher = async <T = any>(
   endpoint: string,
+  method: "get" | "post" | "put" | "delete" | "patch",
+  data: any = {},
   options: AxiosRequestConfig = {}
-): Promise<FetcherResponse<T>> => {
+) => {
   try {
-    const response = await axios.get(endpoint, {
-      headers: {
+    const response = await axios({
+      url: endpoint,
+      method,
+      data: Object.keys(data).length ? data : undefined, 
+       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_BACKEND_AUTH_TOKEN}`,
         "Cache-Control": "max-age=3600",
@@ -31,7 +30,7 @@ const fetcher = async <T = any>(
     });
 
     return {
-      data: response.data.data,
+      data: response?.data?.data,
       success: true,
     };
   } catch (error: unknown) {

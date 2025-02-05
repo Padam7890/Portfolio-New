@@ -71,3 +71,19 @@ export interface IPortfolio {
 }
 
 export type Portfolio = IPortfolio[];
+
+export interface IBlog {
+  id: number;
+  Title: string;
+  Description: any[];
+  Featured_Image: {
+    url: string;
+    alt: string;
+    caption: string;
+  };
+  publishedAt: string;
+}
+
+export type Blog = IBlog[];
+
+export type axiosMethod = 'get' | 'post' | 'put' | 'delete' | 'patch';

@@ -6,8 +6,6 @@ import React from "react";
 const About = async () => {
   const generalInformation: IGeneralApiRes = await fetchGeneralInfo();
   const skills: Skills = await fetchSkillInfo();
-
-  console.log(skills);
   return <AboutPage generalInformation={generalInformation} skills={skills} />;
 };
 

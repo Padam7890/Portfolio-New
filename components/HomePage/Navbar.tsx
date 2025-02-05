@@ -39,14 +39,15 @@ const NavbarComponent = () => {
           </Link>
         </li>
 
-        {/* <li className="navbar-item">
-          <NavLink
-            to="/blog"
-            className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}
-          >
+        <li className="navbar-item">
+          <Link
+            href="/blog"
+            className={
+              path === "/blog" ? "navbar-link active" : "navbar-link"
+            }          >
             Blog
-          </NavLink>
-        </li> */}
+          </Link>
+        </li>
 
         <li className="navbar-item">
           <Link

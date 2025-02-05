@@ -10,14 +10,16 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next();
   }
   try {
-    const response = await fetcher("general?populate=*");
+    const response = await fetcher("general?populate=*", 'get');
     if (response.success === true) {
+      console.log("good")
       // If server is up and the user is on /serverdown, redirect to homepage
       if (url.pathname === '/serverdown') {
         url.pathname = '/';
         return NextResponse.redirect(url);
       }
     } else {
+      console.log("bad")
       // If server is down and user is not on /serverdown, redirect to /serverdown
       if (url.pathname !== '/serverdown') {
         url.pathname = '/serverdown';
